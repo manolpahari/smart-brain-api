@@ -20,7 +20,12 @@ app.use(morgan('combined'));
 
 const db = knex({
   client: 'pg',
-  connection: process.env.POSTGRES_USER
+  connection: {
+    host : '127.0.0.1',
+    user : 'manolsharma',
+    password : '',
+    database : 'smart-brain'
+  }
 });
 
 
